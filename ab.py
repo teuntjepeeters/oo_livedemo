@@ -1,5 +1,9 @@
 class fasta:
 
+    def __init__(self, header):
+        self.__header = header
+        self.__sequenties = []
+
     def setheader(self, header):
         if header.startswith(">"):
             self.__header = header
@@ -10,21 +14,24 @@ class fasta:
         return self.__header
 
     def setsequentie(self, seq):
-        self.__seq = seq
+        self.__sequenties.append(seq)
 
     def getsequentie(self):
-        return self.__seq
+        return "".join(self.__sequenties)
 
 
 def main():
-    f = fasta()
-    f.setheader(">Sequentie1")
-    f.__header = "Ja hoi"
-    print(f.getheader())
-    f.setheader(">Ja hoi")
-    print(f.getheader())
+    f = fasta(">Sequentie1")
+    #f.setheader(">Sequentie1")
     f.setsequentie("ATGGGTCAATGACCTAG")
-    f.__seq = "GGAT"
     print(f.getsequentie())
+    f.setsequentie("GGGAAATTCCCCCCCCCCCCCCCCCCCCCC")
+    print(f.getsequentie())
+
+    # Underscores
+    print(int(4))
+    int_ = 5
+    print(int_)
+
 
 main()
