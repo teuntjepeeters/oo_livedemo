@@ -17,13 +17,17 @@ class fasta:
 
 
 def main():
-    f1 = fasta()
-    f1.setheader(">Sequentie")
-    print(f1.getheader())
-    f1.__header = "Joehoe"
-    print(f1.getheader())
-    f1.setheader(">Joehoe")
-    print(f1.getheader())
+    # f1 = fasta()
+    # f1.setheader(">Sequentie")
+    # print(f1.getheader())
+    # f1.__header = "Joehoe"
+    # print(f1.getheader())
+    # f1.setheader(">Joehoe")
+    # print(f1.getheader())
+    #
+    print("Hello world! ")
+    print_ = "Hello world!"
+    print(print_)
 
 
 main()

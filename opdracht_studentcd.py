@@ -13,6 +13,7 @@ class student:
             self.__voornaam = voornaam
         else:
             print("Dit is geen voornaam")
+            self.__voornaam = ""
 
     def getvoornaam(self):
         return self.__voornaam
@@ -28,7 +29,7 @@ class student:
 
 
 def main():
-    daria = student("Daria", "Gajewska")
+    daria = student("daria", "Gajewska")
     print(daria.getvoornaam(), daria.getachternaam())
 
     glenn = student("Glenn", "Jepkes")
