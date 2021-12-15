@@ -3,6 +3,11 @@ import re
 
 class student:
 
+    def __init__(self, voornaam, achternaam):
+        self.setvoornaam(voornaam)
+        # self.__voornaam = voornaam
+        self.__achternaam = achternaam
+
     def setvoornaam(self, voornaam):
         if re.search("[A-Z][a-z]*", voornaam):
             self.__voornaam = voornaam
@@ -23,15 +28,26 @@ class student:
 
 
 def main():
-    daria = student()
-    daria.setvoornaam("Daria")
+    daria = student("Daria", "Gajewska")
+    print(daria.getvoornaam(), daria.getachternaam())
+
+    glenn = student("Glenn", "Jepkes")
+    print(glenn.getvoornaam(), glenn.getachternaam())
+    exit()
     daria.setachternaam("Gajewska")
     print(daria.getachternaam())
-    exit()
     print(daria.getvoornaam())
 
     luca = student()
     luca.setvoornaam("luca")
     print(luca.getvoornaam())
+
+    glenn = student()
+    glenn.setvoornaam("Glenn")
+
+    joshua = student()
+    joshua.setvoornaam("Joshua")
+    print(joshua.getvoornaam())
+    print(joshua.__voornaam)
 
 main()
